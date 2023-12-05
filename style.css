@@ -89,12 +89,12 @@ body *{
     z-index: 1;
     left: 0;
     transform: translateY(-50%);
+    animation: slide-back 0.4s forwards;
 }
 
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 }
 
 
@@ -177,4 +177,26 @@ footer{
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-back{
+    from{
+        left: 50%;
+    }
+
+    to{
+        left: 0;
+    }
 }
